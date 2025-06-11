@@ -1,0 +1,4 @@
+{"rule":"GERMAN_SPELLER_RULE","sentence":"^\\Q1.5em 0.5em\\E$"}
+{"rule":"WHITESPACE_RULE","sentence":"^\\Q1.5em 0.5em\\E$"}
+{"rule":"WHITESPACE_RULE","sentence":"^\\QTopic\\E$"}
+{"rule":"GERMAN_SPELLER_RULE","sentence":"^\\QTopic\\E$"}

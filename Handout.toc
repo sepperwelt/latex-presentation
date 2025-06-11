@@ -1,0 +1,7 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {section}{\numberline {1}Ziel des Versuchs}{2}{section.1}%
+\contentsline {section}{\numberline {2}Blöcke}{2}{section.2}%
+\contentsline {section}{\numberline {3}Blöcke ohne Titel}{3}{section.3}%
+\contentsline {section}{\numberline {4}Frame-Alignments}{3}{section.4}%
+\contentsline {section}{\numberline {5}Bilder}{4}{section.5}%
+\contentsline {section}{\numberline {6}Literaturverzeichnis}{5}{section.6}%

@@ -1,0 +1,45 @@
+% Slide Headline
+\setbeamertemplate{headline}{}
+
+\newcommand\textline[4][t]{%
+  \par\smallskip\noindent\parbox[#1]{0.333\textwidth}{\raggedright#2}%
+  \parbox[#1]{0.333\textwidth}{\centering#3}%
+  \parbox[#1]{0.333\textwidth}{\raggedleft#4}\par\smallskip%
+}
+
+% -------------------------------
+% Slide Settings
+% -------------------------------
+\setbeamertemplate{frametitle}{
+    \vspace{1.ex}
+    \rlap{%
+        \begin{beamercolorbox}[sep=\titlevmargin, left, wd=\dimexpr\fullpagewidth - \titlehmargin * 2 + \titlevmargin * 2\relax]{frametitle}
+            \begin{minipage}{\dimexpr\fullpagewidth - \titlehmargin * 3 - 0.1cm\relax}
+                \strut\insertframetitle\strut\par
+            \end{minipage}
+        \end{beamercolorbox}
+    }
+    \vspace{\dimexpr-\baselineskip + 1.6ex\relax}
+    \noindent\rlap{\hspace{-\textmargin}\hspace{\titlehmargin}\rule{\dimexpr\fullpagewidth - \titlehmargin * 2\relax}{0.4pt}}
+    \vspace{-0.6ex}
+    \mode<article>{\vspace{1em}}
+}
+
+% -------------------------------
+% Slide Footer
+% -------------------------------
+\setbeamertemplate{footline}{
+    \noindent\hspace{\titlehmargin}\rule{\dimexpr\fullpagewidth - \titlehmargin * 2\relax}{0.4pt}\par
+    \vspace{\titlevmargin}
+    \leavevmode
+    \noindent\hspace{\dimexpr\titlehmargin - \titlevmargin\relax}
+    \begin{beamercolorbox}[sep=\titlevmargin, wd=\dimexpr\fullpagewidth - \titlehmargin * 2 + \titlevmargin * 1\relax]{footline}
+        %\hfill
+        {\usebeamercolor[fg]{presentor in head/foot}\usebeamerfont{presentor in head/foot}\insertsection}
+        \hfill
+        {\usebeamercolor[fg]{date in head/foot}\usebeamerfont{date in head/foot}\insertsubsection}
+        \hfill
+        {\usebeamercolor[fg]{page number in head/foot}\usebeamerfont{page number in head/foot}\usebeamertemplate{page number in head/foot}}
+    \end{beamercolorbox}
+    \vspace{\titlevmargin}
+}

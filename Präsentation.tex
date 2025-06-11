@@ -1,0 +1,53 @@
+\documentclass[german,smaller, aspectratio=169,c,allowframebreaks]{beamer}
+
+% Packages
+\input{config/preamble}
+\input{config/frame-settings}
+\input{config/commands.tex}
+
+% Title Page
+\input{slides/titlepage}
+
+% Metadata
+\newcommand{\paperTitle}{Titel der Präsentation}
+\newcommand{\paperAuthors}{Autoren}
+\newcommand{\paperAuthorsAffiliation}{Zugehörigkeit o.ä. der Autoren}
+\newcommand{\paperPublishedYear}{Jahr/Semester}
+\newcommand{\paperConference}{Vorlesungsreihe/-name}
+\newcommand{\paperConferenceAbbreviation}{Vorlesungsabkürzung}
+
+\newcommand{\presentor}{Präsentator:in}
+\newcommand{\presentationDate}{Präsentationsdatum}
+
+\title[Paper Presentation]{\paperTitle}
+\author{\paperAuthors}
+\institute{Hochschule Zittau-Görlitz}
+\date[Juni 2025]{\paperConference, \paperPublishedYear}
+
+\begin{document}
+
+% Title Page
+\begin{frame}[plain]
+    \titlepage
+\end{frame}
+
+% Table of Contents
+\begin{frame}{Gliederung}
+    \setbeamertemplate{section in toc}[sections numbered]
+    \tableofcontents[hideallsubsections]
+\end{frame}
+
+% Main Content
+% -------------------------------
+% Slide Content
+% -------------------------------
+\include{slides/Abschnitt1}
+
+% References
+\newSection{Literaturverzeichnis}
+\begin{frame}[t,allowframebreaks]{Literaturverzeichnis}
+    \nocite{*}
+    \small
+    \printbibliography
+\end{frame}
+\end{document}

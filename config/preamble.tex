@@ -1,0 +1,145 @@
+% -------------------------------
+% Outer Theme Configuration
+\useoutertheme{infolines}
+
+% -------------------------------
+% Inner Theme Configuration
+\useinnertheme[showtitle=false]{tcolorbox}      % no block title bar for empty block titles
+
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+\setbeamertemplate{frametitle continuation}{}
+
+% -------------------------------
+% Package Imports
+% -------------------------------
+\usepackage[utf8]{inputenc}        % UTF-8 encoding
+\usepackage[ngerman]{babel}        % German language support
+\uselanguage{german}
+\languagepath{German}
+\usepackage{amsmath, nccmath}      % For math symbols and environments
+\usepackage{amssymb}               % For additional math symbols
+\usepackage{amsfonts}              % For math fonts
+\usepackage{amsthm}                % For theorem environments
+\usepackage{graphicx}              % For including graphics
+\usepackage{xcolor}                % Colored elements and tables
+\usepackage{tikz}                  % For creating graphics programmatically
+\usepackage{circuitikz}
+\usepackage{eso-pic}               % Background images
+\usepackage{float}                 % Precise float positioning
+\usepackage{epstopdf}              % EPS to PDF conversion
+\usepackage{array}                 % Column width definition
+\usepackage{booktabs}              % Professional horizontal lines
+\usepackage{caption}               % Caption customization
+\usepackage{colortbl}              % Colored tables
+\usepackage{longtable}             % Tables that can span multiple pages
+\usepackage{makecell}              % Customized cell formatting
+\usepackage{tabularx}              % Flexible-width tables
+\usepackage{bookmark}              % PDF bookmarks
+\usepackage{hyperref}              % For hyperlinks
+\usepackage{cleveref}              % Clever referencing for improved cross-references
+\usepackage{csquotes}
+\usepackage{todonotes}
+\usepackage{setspace}
+\usepackage{multicol}
+\usepackage{etoolbox}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+%\usepackage{newtxtext}
+
+% -------------------------------
+% Bibliography Management
+% -------------------------------
+\usepackage[
+    backend=biber,
+    style=ieee,
+]{biblatex}                        % Bibliography management
+\addbibresource{./references.bib}    % Bibliography file
+
+% -------------------------------
+% Color and Theme Customization
+% -------------------------------
+\definecolor{myBlue}{RGB}{0,33,71}
+
+\usecolortheme[named=myBlue]{structure}
+
+\setbeamercolor{block title}{use=structure,fg=white,bg=structure.fg!75!myBlue}
+\setbeamercolor{block body}{parent=normal text,use=block title,bg=block title.bg!10!bg}
+
+\setbeamercolor{block title alerted}{use=structure,fg=white,bg=structure.fg!30!red}
+\setbeamercolor{block body alerted}{parent=normal text,use=block title alerted,bg=block title alerted.bg!10!bg}
+
+\setbeamercolor{block title example}{use=structure,fg=white,bg=structure.fg!75!green}
+\setbeamercolor{block body example}{parent=normal text,use=block title example,bg=block title example.bg!10!bg}
+
+\setbeamercolor{footnote mark}{fg=parent.fg}    % change footnote mark color based on parent
+
+% Remove navigation symbols
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{caption}[numbered]
+
+\setcounter{secnumdepth}{3}
+\setbeamertemplate{subsection in toc}[subsections numbered]
+
+\defbeamertemplate{subsubsection in toc}{subsubsections numbered}
+{\leavevmode\leftskip=3em \rlap{\hskip-3em\inserttocsectionnumber.\inserttocsubsectionnumber.\inserttocsubsubsectionnumber}
+    \inserttocsubsubsection\par}
+\setbeamertemplate{subsubsection in toc}[subsubsections numbered]
+
+% -------------------------------
+% Custom Dimensions
+% -------------------------------
+\newlength{\textmargin}
+\setlength{\textmargin}{10mm}
+\setbeamersize{text margin left=\textmargin, text margin right=\textmargin}
+
+\newlength{\titlehmargin}
+\setlength{\titlehmargin}{5mm}
+
+\newlength{\titlevmargin}
+\setlength{\titlevmargin}{1mm}
+
+\newlength{\fullpagewidth}
+\setlength{\fullpagewidth}{\dimexpr\textwidth + 2\textmargin\relax}
+
+\makeatletter
+\patchcmd{\beamer@sectionintoc}{\vskip1.5em}{\vskip0.5em}{}{}
+\makeatother
+
+% -------------------------------
+% Hyperlink Settings
+% -------------------------------
+\hypersetup{
+    colorlinks=true,
+    linkcolor=myBlue,
+    citecolor=myBlue,
+    filecolor=myBlue,
+    urlcolor=myBlue,
+    pdfborder={0 0 0}
+}
+
+% ---- Caption Colors ----
+% ---- Caption Font Size ----
+\captionsetup[figure]{
+    labelformat=empty,      % Remove "Figure" label
+    font={footnotesize},    % Set font size to 10pt (small)
+    skip=5pt,               % Add spacing between caption and figure
+    labelfont=bf,
+    justification=centering
+}
+
+\captionsetup[table]{
+    labelformat=empty,      % Remove "Table" label
+    font={footnotesize},    % Set font size to 10pt (small)
+    skip=5pt,               % Add spacing between caption and table
+    labelfont=bf,
+    justification=centering
+}
+
+\AtBeginSection[]{
+    \begin{frame}{Inhalt}
+        \tableofcontents[currentsection,sectionstyle=hide/hide,subsectionstyle=show/show/hide]
+    \end{frame}
+}
+
+\renewcommand{\footnotesize}{\scriptsize}
+%\setbeameroption{show notes on second screen}

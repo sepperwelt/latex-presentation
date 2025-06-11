@@ -1,0 +1,16 @@
+\newcommand{\newSection}[1]{
+    \mode<presentation>{\newpage}
+    \usebackgroundtemplate{
+        \includegraphics[width=\paperwidth]{assets/presentation-theme/slide-new-chapter.png}
+    }
+    \begin{frame}[plain]
+        \mode<article>{\vspace{0.6cm}}
+        \mode<presentation>{\vfill}
+        \raggedright
+        \textcolor{white}{\Huge{#1}}
+        \mode<presentation>{\vfill}
+    \end{frame}
+    \usebackgroundtemplate{}
+    \mode<article>{\noindent\makebox[\textwidth]{\rule{1.06\linewidth}{1pt}}}
+    \section{#1}
+}

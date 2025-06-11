@@ -1,0 +1,41 @@
+\begin{figure}[!ht]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\large]
+\draw [ fill={rgb,255:red,0; green,0; blue,0} ] (6.25,14.25) rectangle (6.5,11.75);
+\draw [->, >=Stealth] (9.5,13) -- (5,13);
+\draw  (7.5,13) ellipse (0.25cm and 0.75cm);
+\draw  (8.75,13) ellipse (0.25cm and 1.25cm);
+\draw [short] (6.5,13.75) -- (9.5,11.5);
+\draw [short] (6.5,12.25) -- (9.5,14.5);
+\draw [line width=1.1pt, short] (9.5,14.75) -- (13.75,14.75);
+\draw [line width=1.1pt, short] (9.5,11.25) -- (13.75,11.25);
+\draw [short] (13.75,14.75) -- (17,14.75);
+\draw [short] (13.75,11.25) -- (17,11.25);
+\draw [short] (13.75,11.5) -- (16.75,11.5);
+\draw [short] (13.75,14.5) -- (16.75,14.5);
+\draw  (17.75,13.5) rectangle (21,12.25);
+\draw [short] (17,14.75) -- (17,13.25);
+\draw [short] (17,13.25) -- (17.75,13.25);
+\draw [short] (17,11.25) -- (17,12.5);
+\draw [short] (17,12.5) -- (17.75,12.5);
+\draw [short] (16.75,11.5) -- (16.75,14.5);
+\draw  (15.5,13) circle (0.75cm);
+\draw [short] (15,13.5) -- (16,12.5);
+\draw [short] (15,12.5) -- (16,13.5);
+\draw [ fill={rgb,255:red,0; green,0; blue,0} ] (11.5,13.75) circle (0.25cm);
+\shade[ball color = black!80,opacity = 1] (11.5,13.75) circle (0.25cm);
+\draw [->, >=Stealth] (18.5,12.25) -- (18.5,11.75);
+\node [font=\large] at (5,12.5) {PC};
+\node [font=\large] at (7.75,11) {Mikroskop mit};
+\node [font=\large] at (7.75,10.5) {digitalem Okular};
+\node [font=\large] at (11.75,13) {Öltröpfchen};
+\node [font=\large] at (11.75,10.75) {Kondensator};
+\node [font=\large] at (15.5,10.75) {Lampe};
+\node [font=\large] at (19.375,12.875) {Steuereinheit};
+\node [font=\large] at (18.5,11.5) {PC};
+\end{circuitikz}
+}%
+\caption{Versuchsaufbau\cite{oaverq4milver}}
+\end{figure}
